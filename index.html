@@ -12,6 +12,7 @@
     <!-- Preconnect to Apper.io for faster script loading -->
     <link rel="preconnect" href="https://cdn.apper.io">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="%VITE_APPER_SDK_CDN_URL%"></script>
     <script>
       // Enhanced error handling for all image and canvas related errors
       window.addEventListener('error', function(e) {
@@ -35,7 +36,7 @@
         }
       });
       
-// Add image loading timeout protection with avatar-specific handling
+      // Add image loading timeout protection with avatar-specific handling
       window.addEventListener('DOMContentLoaded', function() {
         const images = document.querySelectorAll('img');
         images.forEach(img => {
@@ -66,12 +67,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <!-- Load Apper script after DOM is ready with enhanced error handling -->
-    <script 
-      defer 
-      onload="console.log('Apper script loaded successfully')" 
-      onerror="console.warn('Apper script failed to load - continuing without analytics')" 
-      src="https://cdn.apper.io/apper-dev-script/index.umd.js">
-    </script>
   </body>
 </html>
